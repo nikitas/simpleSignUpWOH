@@ -2,6 +2,4 @@ npm i
 
 npm run dev
 
-To run tests:
-
-npx vitest
+go to http://localhost:5173/

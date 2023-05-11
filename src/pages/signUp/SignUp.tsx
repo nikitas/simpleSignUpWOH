@@ -2,6 +2,8 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Box, Button, Link, Typography, styled } from "@mui/material";
 import * as Yup from "yup";
+import { routes } from "@/routes";
+import { Link as RouterLink } from "react-router-dom";
 
 interface SignUpFormValues {
   name: string;
@@ -164,9 +166,11 @@ const SignUpForm = () => {
           )}
         </Formik>
         <Box sx={{ display: "flex", justifyContent: "center", mt: 5 }}>
-          <Link variant="subtitle2" color={"#D0F83E"}>
-            I already have an Haiku account.
-          </Link>
+          <RouterLink to={routes.signin}>
+            <Link variant="subtitle2" color={"#D0F83E"}>
+              I already have an Haiku account.
+            </Link>
+          </RouterLink>
         </Box>
       </SignUpWrapper>
     </Box>
